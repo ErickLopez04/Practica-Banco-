@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+}
+
+/* CABECERA */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #EEEEEE;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.menu > li {
+    float: left;
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 20px 20px;
+    color: #0F044C;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+    background: #141E61;
+    color: #fff;
+}
+
+.menu li ul {
+    display: none;
+    position: absolute;
+    top: 63px;
+    left: 0;
+    min-width: 160px;
+    background-color: #EEEEEE;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.menu li ul li a {
+    font-size: 16px;
+    padding: 12px 15px;
+}
+
+/* LOGO */
+.logo {
+    margin-left: 30px;
+}
+
+.logo img {
+    max-height: 55px;
+}
+
+/*  HERO  */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh !important;
+    background: url(img/distrito-central-negocios-singapur.jpg) no-repeat center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0F044C;
+}
+
+/*  TEXTO  */
+h1 {
+    margin-bottom: 40px;
+    font-size: 42px;
+    color: #222;
+    padding: 0 100px;
+}
+
+p {
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #333;
+    padding: 0 100px;
+}
+
+/*  BOTONES  */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 35px;
+    border: 2px solid #141E61;
+    color: #fff;
+    text-decoration: none;
+    background: #141E61;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #fff;    
+    color: #141E61;
+}
+
+/* SECCIONES */
+.content {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.sau {
+    background: #9499d1;
+    color: #fff;
+}
+
+/* PRODUCTOS (CARDS)*/
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+.box-container .box {
+    height: 12rem;
+    width: 18rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 1rem rgba(0,0,0,.2);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-container .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.3);
+}
+
+.box-container .box h3 {
+    font-size: 22px;
+    color: #0F044C;
+    margin-top: 10px;
+}
+
+/*NOSOTROS*/
+.about {
+    background: #EEEEEE;
+}
+
+.mision, .valores {
+    background: #9499d1;
+    color: #fff;
+    text-align: center;
+}
+
+/*CONTACTO */
+.contact {
+    padding: 30px 20px;
+    background: #EEEEEE;
+}
+
+/* RESPONSIVE*/
+@media (max-width: 767px) {
+    .head {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        position: static;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu a {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .header {
+        height: 40vh !important;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    h1 {
+        font-size: 26px;
+        padding: 0 20px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .box-container .box {
+        width: 14rem;
+        height: auto;
+    }
+
+    .box-container .box h3 {
+        font-size: 18px;
+    }
+}
